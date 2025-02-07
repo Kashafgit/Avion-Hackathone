@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
 import Link from "next/link";
+import AuthGuard from "../components/AuthGuard";
 
 export default function CartPage() {
   const [cartItem, setCartItem] = useState<Product[]>([]);
@@ -16,7 +17,7 @@ export default function CartPage() {
 
   const handleRemove = (id: string) => {
     Swal.fire({
-      position: "bottom-right",
+      position: "center",
       icon: "warning",
       title: "Are you sure?",
       showCancelButton: true,
@@ -53,6 +54,7 @@ export default function CartPage() {
   };
 
   return (
+    <AuthGuard>
     <div className="container mx-auto px-4 py-6">
       <h1 className="text-2xl font-bold mb-4">Shopping Cart</h1>
 
@@ -100,5 +102,6 @@ export default function CartPage() {
         </div>
       )}
     </div>
+    </AuthGuard>
   );
 }
