@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Bottom() {
     return (
         <>
-            <div className="flex flex-col lg:flex-row lg:justify-between lg:ml-20">
+            <div className="flex flex-col lg:flex-row lg:justify-between lg:ml-20 my-10">
                 <div className="lg:w-[600px] p-6 text-gray-500">
                     <h1 className="text-2xl">From a studio in London to a global with over 400 outlets</h1>
                     <br />

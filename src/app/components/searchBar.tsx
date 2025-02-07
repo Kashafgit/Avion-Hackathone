@@ -76,7 +76,7 @@ export default function SearchSanityData() {
             <div className="grid grid-cols-1 gap-2 sm:gap-4">
               {result.map((product) =>
                 product?.slug ? (
-                  <Link href={`/products/${product.slug}`} key={product?._id ?? `fallback-key-${Math.random()}`}>
+                  <Link href={`/products/${product.slug}`} key={product?._id}>
                     <div className="flex gap-x-2 sm:gap-x-4 items-center bg-gray-100 border rounded shadow p-2 sm:p-3 hover:bg-gray-200 transition">
                       <Image
                         width={200}
@@ -94,14 +94,16 @@ export default function SearchSanityData() {
                     </div>
                   </Link>
                 ) : (
-                  <div key={product?._id ?? `fallback-key-${Math.random()}`} className="text-red-500 text-xs sm:text-sm">
+                  <div key={product?._id} className="text-red-500 text-xs sm:text-sm">
                     No slug available for this product.
                   </div>
                 )
               )}
             </div>
           ) : (
-            <p className="text-gray-500 text-xs sm:text-sm">No products found for "{query}".</p>
+            <p className="text-gray-500 text-xs sm:text-sm">
+              No products found for &lsquo;{query}&rsquo;
+            </p>
           )}
         </div>
       )}

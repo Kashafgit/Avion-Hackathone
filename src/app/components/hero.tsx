@@ -23,7 +23,7 @@ export default function Hero() {
             The furniture brand for the <br /> future, with timeless designs
           </h1>
           <p className="mt-6 md:mt-10 leading-relaxed text-sm md:text-base">
-            Our furniture is designed for people who want comfort, style, and durability without breaking the bank. Whether you’re a young professional setting up your first apartment or a family looking for functional pieces, our furniture fits perfectly into any home.
+            Our furniture is designed for people who want comfort, style, and durability without breaking the bank. Whether you&#34;re a young professional setting up your first apartment or a family looking for functional pieces, our furniture fits perfectly into any home.
           </p>
 
           {/* Button */}
